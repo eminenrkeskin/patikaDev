@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	int fizik, kimya, biyo, mat, dil;
+			
+	Scanner scan = new Scanner(System.in);
+			
+  System.out.println("Fizik notunuzu girin: ");
+	fizik = scan.nextInt();
+			
+	System.out.println("Kimya notunuzu girin: ");
+	kimya = scan.nextInt();
+			
+	System.out.println("Biyoloji notunuzu girin: ");
+	biyo = scan.nextInt();
+			
+	System.out.println("Matematik notunuzu girin: ");
+	mat = scan.nextInt();
+			
+	System.out.println("Dil notunuzu girin: ");
+	dil = scan.nextInt();
+			
+			
+	int toplam = (fizik + kimya + biyo + mat + dil);
+	double ort = toplam / 5;
+		
+	sonuc = (ort >= 60) ? "Sınıfı geçti." : "Sınıfı geçemedi."; 
+	System.out.println(sonuc);
+
+	}
+
+}
