@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		double armut, elma, domates, muz, patlican;
+		double armutFiyat = 2.14, elmaFiyat = 3.67, domatesFiyat = 1.11, muzFiyat = 0.95, patlicanFiyat = 5.00;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Armudun kilosunu girin: ");
+		armut = input.nextDouble();
+		
+		System.out.println("Elmanın kilosunu girin: ");
+		elma = input.nextDouble();
+		
+		System.out.println("Domatesin kilosunu girin: ");
+		domates = input.nextDouble();
+		
+		System.out.println("Muzun kilosunu girin: ");
+		muz = input.nextDouble();
+		
+		System.out.println("Patlıcanın kilosunu girin: ");
+		patlican = input.nextDouble();
+		
+		double toplam = (armut * armutFiyat) + (elma * elmaFiyat) + (domates * domatesFiyat) + (muz * muzFiyat) + (patlican * patlicanFiyat);
+		
+		System.out.println("Toplam fiyat: " +toplam);
+		
+		
+	}
+
+}
