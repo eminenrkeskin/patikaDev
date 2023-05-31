@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int kenar1, kenar2;
+		double hipotenus;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Birinci kenar uzunluğunu giriniz: ");
+		kenar1 = input.nextInt();
+		
+		System.out.println("İkinci kenar uzunluğunu giriniz: ");
+		kenar2 = input.nextInt();
+		
+		hipotenus = Math.sqrt(Math.pow(kenar1, 2) + Math.pow(kenar2, 2));
+		System.out.println("Hipotenüs: " +hipotenus);
+		
+		double u = (kenar1 + kenar2 + hipotenus) /2.0;
+		double alan = Math.sqrt(u * (u - kenar1) * (u - kenar2) * (u - hipotenus));
+		System.out.println("Üçgenin alanı: " +alan);
+
+	}
+
+}
