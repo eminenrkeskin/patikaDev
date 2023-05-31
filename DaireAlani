@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		double yaricap, a;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Dairenin yarıçapını girin: ");
+		yaricap = input.nextDouble();
+		
+		System.out.println("Dairenin merkez açısını girin: ");
+		a = input.nextDouble();
+		
+		double alan = (Math.PI * Math.pow(yaricap, 2));
+		double cevre = 2 * (Math.PI * yaricap);
+		
+		double merkezAlan = ((Math.PI * (Math.pow(yaricap, 2)) * a) / 360);
+		
+		System.out.println("Dairenin Alanı: " +alan);
+		System.out.println("Dairenin Çevresi: " +cevre);
+		System.out.println("Daire Diliminin Alanı: " +merkezAlan);
+	}
+
+}
