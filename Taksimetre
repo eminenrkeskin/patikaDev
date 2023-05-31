@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int km;
+		double fiyatKm = 2.20, ucret, start = 10;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Mesafe kaç KM'dir? ");
+		km = input.nextInt();
+		
+		ucret = (km * fiyatKm);
+		ucret += start;
+		
+		ucret = (ucret < 20) ? 20 : ucret;
+		System.out.println("Taksimetre ücreti : " +ucret);
+
+	}
+
+}
