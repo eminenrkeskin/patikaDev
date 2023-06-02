@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+
+            int sicaklik;
+
+            System.out.println("Etkinlik önerisi için sıcaklığı girin: ");
+            sicaklik = input.nextInt();
+            
+            if(sicaklik < 5) {
+                    System.out.println("Kayak yapmanızı tavsiye ederiz.");
+            } else if (sicaklik < 15) {
+                    System.out.println("Sinemaya gitmenizi tavsiye ederiz.");
+            } else if (sicaklik < 25) {
+                    System.out.println("Piknik yapmanızı tavsiye ederiz.");
+            } else if (sicaklik > 25) {
+                    System.out.println("Yüzmeye gitmenizi tavsiye ederiz.");
+            } else {
+                    System.out.println("Yanlış bir sayı girdiniz.");
+            }
+
+
+
+    }
+
+}
