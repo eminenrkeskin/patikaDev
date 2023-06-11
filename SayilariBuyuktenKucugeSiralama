@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+            int a, b, c;
+            Scanner input = new Scanner(System.in);
+
+            System.out.println("Birinci sayıyı girin: ");
+            a = input.nextInt();
+
+            System.out.println("İkinci sayıyı girin: ");
+            b = input.nextInt();
+
+            System.out.println("Üçüncü sayıyı girin: ");
+            c = input.nextInt();
+
+            if (a > b && a > c) {
+                    System.out.println("a > b > c");
+            } else if (b > a && b > c) {
+                    System.out.println("b > a > c");
+            } else {
+                    System.out.println("c > a > b");
+            }
+
+
+    }
+
+}
