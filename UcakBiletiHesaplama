@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		double mesafe, ucret, mesafeUcret = 0.10;
+		int yolculukTipi, yas;
+		boolean isError = false;
+		
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Mesafeyi km türünden giriniz: ");
+        mesafe = input.nextDouble();
+        
+        System.out.println("Yaşınızı giriniz: ");
+        yas = input.nextInt();
+        
+        System.out.println("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş-Dönüş): ");
+        yolculukTipi = input.nextInt();
+        
+        ucret = mesafe * mesafeUcret;
+        
+        if (yas < 12) {
+        	ucret *= 0.5;
+        } else if (yas >= 12 && yas <= 24) {
+        	ucret *= 0.9;
+        } else if (yas > 65) {
+			ucret *= 0.7;
+        }
+        
+        switch (yolculukTipi) {
+		case 1:
+			ucret = ucret;
+			break;
+		case 2: 
+			ucret *= 0.2;
+			break;
+		default:
+			isError = true;
+		}
+        
+        
+       if (!(mesafe > 0)) {
+    	   isError = true;
+       }
+       
+       if (isError == true) {
+    	   System.out.println("Hatalı veri girdiniz!");
+       } else {
+    	  System.out.println("Ödeyeceğiniz toplam ücret: " +ucret);
+	}
+    }
+
+}
