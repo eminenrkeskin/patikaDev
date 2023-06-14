@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		int a, kacSayi = 0, toplam = 0;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Sayı giriniz: ");
+		a = input.nextInt();
+		
+		for(int i = 0; i < a; i++) {
+			if (i % 3 == 0 && i % 4 == 0) {
+				toplam = toplam + i;
+				kacSayi++;
+			}
+		}
+		
+		double ort = toplam / kacSayi;
+		
+		System.out.println("Girdiğiniz sayıya kadar 3 ve 4'e bölünen sayıların toplamı: " +toplam);
+		System.out.println("Girdiğiniz sayıya kadar 3 ve 4'e bölünen sayıların ortalaması: " +ort);
+
+
+		
+
+        
+    }
+
+}
