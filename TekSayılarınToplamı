@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		int a, toplam = 0;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Sayı giriniz: ");
+		a = input.nextInt();
+		
+		do {
+			if(a % 4 == 0) {
+				toplam += a;
+				System.out.println("Çift ve 4'e bölünen sayıların toplamı: " +toplam);
+			}
+		}while (a % 2 == 0);
+		
+
+		System.out.println("Çift sayı ve 4'e bölünen sayıların toplamı: " + toplam);
+        
+    }
+
+}
