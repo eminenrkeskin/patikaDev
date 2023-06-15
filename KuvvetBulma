@@ -12,13 +12,14 @@ public class Main
 		System.out.println("4 ve 5'in kuvvetlerini yazdıracak tavan sayıyı girin: ");
 		tavanSayi = input.nextInt();
 		
-		for (int i = 1; i <= tavanSayi; i*=4) {
-		  System.out.println(i);
-		  System.out.println();
-		  for (int j = 1; j <= tavanSayi; j*=5) {
-		    System.out.println(j);
+		for (int i = 1; i <= tavanSayi; i++) {
+		  System.out.println("4^" +i +" = " + Math.pow(4, i));
+		}
+		  for (int j = 1; j <= tavanSayi; j++) {
+		    System.out.println("5^" +j +" = " + Math.pow(5, j));
 		    
 		  }
-		}
+		
 	}
 }
+
