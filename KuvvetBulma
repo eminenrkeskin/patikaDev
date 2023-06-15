@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	  
+	  int tavanSayi;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("4 ve 5'in kuvvetlerini yazdıracak tavan sayıyı girin: ");
+		tavanSayi = input.nextInt();
+		
+		for (int i = 1; i <= tavanSayi; i*=4) {
+		  System.out.println(i);
+		  System.out.println();
+		  for (int j = 1; j <= tavanSayi; j*=5) {
+		    System.out.println(j);
+		    
+		  }
+		}
+	}
+}
