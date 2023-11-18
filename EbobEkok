@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir sayı girin: ");
+        int x = input.nextInt();
+        System.out.println("Bir sayı daha girin: ");
+        int y = input.nextInt();
+
+        int ebob = 1;
+        int i = 1;
+        while (i <= x && i <= y) {
+            if (x % i == 0 && y % i == 0) {
+                ebob = i;
+            }
+            i++;
+        }
+
+        int ekok = (x*y) / ebob;
+
+        System.out.println(ebob);
+        System.out.println(ekok);
+
+
+
+
+    }
+}
