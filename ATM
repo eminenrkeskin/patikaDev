@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String userName, password;
+        int balance = 1000, amount, operation;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Kullanıcı Adınızı Girin: "); //Kullanıcı adı girişi
+        userName = input.nextLine();
+
+        System.out.println("Parolanızı Girin: "); //Parola girişi
+        password = input.nextLine();
+
+        //parola ve kullanıcı adının doğruluğu if-else
+        if(userName.equals("examplename") && password.equals("java123")){
+            System.out.println("Merhaba, hoş geldiniz.");
+        }
+        else {
+            System.out.println("Kullanıcı adı veya şifreniz yanlış. Tekrar deneyiniz.");
+        }
+
+
+
+        System.out.println("Yapmak istediğiniz işlemi seçiniz.");
+        //işlem bölmesinin seçimi
+        System.out.println("Bakiye Görüntüleme ==> 1\n" +
+                "Para Çekme ==> 2\n" +
+                "Para Yatırma ==> 3\n" +
+                "Çıkış Yapma ==> 4");
+
+        //işlem için girdi yapıldı
+        operation=input.nextInt();
+
+        //if else işlem gerçekleştirme
+
+        if(operation==1){
+            System.out.println("Güncel bakiyeniz: " +balance);
+        }
+        else if (operation==2){
+            System.out.println("Çekmek istediğiniz miktarı girin: ");
+            amount= input.nextInt();
+            if (amount>balance)
+                System.out.println("Bakiyeden fazla miktarda para çekemezsiniz.");
+            else {
+            balance-=amount;
+            System.out.println("İşlemden sonra güncel bakiyeniz: " +balance +"TL");
+            }
+        }
+        else if (operation==3){
+            System.out.println("Yatırmak istediğiniz miktarı girin: ");
+            amount= input.nextInt();
+            balance+=amount;
+            System.out.println("İşlemden sonra güncel bakiyeniz: " +balance +"TL");
+        }
+        else if (operation==4) {
+            System.out.println("Çıkış yapılıyor...");
+            System.out.println("İyi günler dileriz.");
+        }
+        else {
+            System.out.println("Geçerli bir tuşa basınız.");
+        }
+
+    }
+}
